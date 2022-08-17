@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RE4ICN6?postJsllMsg=true"
+          data-background-interactive="true"
+          data-background-iframe-loop="true"
+          data-background-opacity="0.3"
+        >
+          <h1>Serverless Computing, FaaS, Azure Functions</h1>
+        </section>
+        <section
+          data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RWEsag?postJsllMsg=true"
+          data-background-interactive="true"
+          data-background-iframe-loop="true"
+          data-background-opacity="0.3"
+        >
+          <h2 style="margin: 100px auto 40px">What is Azure?</h2>
+          <h3
+            style="
+              font-size: 22px;
+              line-height: 30px;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Azure is a continually expanding set of cloud services that help
+            your organization meet your current and future business challenges.
+          </h3>
+          <br />
+          <h3
+            style="
+              font-size: 22px;
+              line-height: 30px;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Azure gives you the freedom to build, manage, and deploy
+            applications on a massive global network using your favorite tools
+            and frameworks.
+          </h3>
+        </section>
+        <section>
+          <h3 style="line-height: 30px; margin: 100px auto 40px">
+            What does Azure offer?
+          </h3>
+          <section
+            data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RWBg9Q?postJsllMsg=true"
+            data-background-interactive="true"
+            data-background-iframe-loop="true"
+            data-background-opacity="0.3"
+          >
+            <div style="display: flex; justify-content: space-between" class="">
+              <p style="font-size: 24px; text-align: left; margin: 20px">
+                <b>Be ready for the future:</b> Continuous innovation from
+                Microsoft supports your development today and your product
+                visions for tomorrow.
+              </p>
+              <div class="">
+                <img
+                  src="./examples/assets/roket.png"
+                  alt="roket"
+                  style="max-width: 400px"
+                />
+              </div>
+            </div>
+            <div class="" style="display: flex; justify-content: space-between">
+              <div class="" style="font-size: 24px; text-align: left">
+                <img
+                  src="./examples/assets/bars.png"
+                  alt="bars"
+                  style="max-width: 400px"
+                />
+              </div>
+              <p style="font-size: 24px; text-align: left; margin: 20px">
+                <b>Build on your terms:</b> You have choices. With a commitment
+                to open source, and support for all languages and frameworks,
+                you can build how you want and deploy where you want to.
+              </p>
+            </div>
+          </section>
+          <section
+            data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RWBg9Q?postJsllMsg=true"
+            data-background-interactive="true"
+            data-background-iframe-loop="true"
+            data-background-opacity="0.3"
+          >
+            <div class="" style="display: flex; justify-content: space-between">
+              <p style="font-size: 24px; text-align: left; margin: 20px">
+                <b>Operate hybrid seamlessly:</b> On-premises, in the cloud, and
+                at the edge--we'll meet you where you are. Integrate and manage
+                your environments with tools and services designed for a hybrid
+                cloud solution.
+              </p>
+              <div class="">
+                <img
+                  src="./examples/assets/builds.png"
+                  alt="buildings"
+                  style="max-width: 400px"
+                />
+              </div>
+            </div>
+            <div class="" style="display: flex; justify-content: space-between">
+              <div class="">
+                <img
+                  src="./examples/assets/sheeld.png"
+                  alt=""
+                  style="max-width: 400px"
+                />
+              </div>
+              <p style="font-size: 24px; text-align: left; margin: 20px">
+                <b>Trust your cloud:</b> Get security from the ground up, backed
+                by a team of experts, and proactive compliance trusted by
+                enterprises, governments, and startups.
+              </p>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3 style="color: white">How does Azure work?</h3>
+          <div style="display: flex; justify-content: space-between">
+            <section
+              data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RWJKac?postJsllMsg=true"
+              data-background-interactive="true"
+              data-background-iframe-loop="true"
+              data-background-opacity="1"
+              style="width: 50vh; height: 50vh"
+            ></section>
+            <ul
+              style="
+                font-size: 26px;
+                line-height: 30px;
+                max-width: 200px;
+                margin-right: -100px;
+              "
+            >
+              Azure uses a technology known as virtualization:
+              <li style="margin: 20px 0 0 20px; font-size: 22px">
+                Virtualization separate.
+              </li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Hypervisor emulates.
+              </li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Repeat virtualisation.
+              </li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Servers connectivity.
+              </li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Orchestrator's Web API.
+              </li>
+              <li style="font-size: 22px; margin-left: 20px">Web API tools.</li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Easy build, deploy, manage.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- <div
+            style="
+              width: 100px;
+              height: 100px;
+              background: url('https://www.microsoft.com/en-us/videoplayer/embed/RWJKac?postJsllMsg=true');
+            "
+          ></div> -->
+
+        <section>
+          <h3 style="line-height: 30px; margin: 0 auto 50px">Azure services</h3>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              width: 80vw;
+              margin: 0 auto;
+            "
+          >
+            <div style="margin-left: -100px">
+              <img
+                src="./examples/assets/Azure services.jpg"
+                alt="azure service"
+              />
+            </div>
+            <ul
+              style="
+                font-size: 26px;
+                line-height: 30px;
+                max-width: 800px;
+                margin: 40px auto 0;
+              "
+            >
+              Most commonly used categories:
+              <li style="margin: 20px 0 0 20px; font-size: 22px">Compute</li>
+              <li style="font-size: 22px; margin-left: 20px">Networking</li>
+              <li style="font-size: 22px; margin-left: 20px">Storage</li>
+              <li style="font-size: 22px; margin-left: 20px">Mobile</li>
+              <li style="font-size: 22px; margin-left: 20px">Databases</li>
+              <li style="font-size: 22px; margin-left: 20px">Web</li>
+              <li style="font-size: 22px; margin-left: 20px">
+                Internet of Things (IoT)
+              </li>
+              <li style="font-size: 20px; margin-left: 20px">Big data</li>
+              <li style="font-size: 20px; margin-left: 20px">AI</li>
+              <li style="font-size: 20px; margin-left: 20px">DevOps</li>
+            </ul>
+          </div>
+        </section>
+        <section
+          data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RWAqjM?postJsllMsg=true"
+          data-background-interactive="true"
+          data-background-iframe-loop="true"
+          data-background-opacity="0.3"
+        >
+          <h2>Explore Azure functions</h2>
+          <p style="font-size: 28px; margin-top: 50px; line-height: 30px">
+            Azure Functions can serve many purposes in an application's design.
+            Functions can be written in many common programming languages, such
+            as: <b>C#, Python, JavaScript, Typescript, Java, and PowerShell.</b>
+          </p>
+          <ul>
+            <li style="margin-top: 20px; font-size: 24px">
+              Azure Functions scales automatically.
+            </li>
+            <li style="font-size: 24px">
+              An Azure function is a stateless environment.
+            </li>
+            <li style="font-size: 24px">
+              Azure Functions can perform orchestration tasks.
+            </li>
+            <li style="font-size: 24px">
+              The Azure Functions solution is ideal when you're concerned only
+              with the code.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2 style="font-size: 40px; line-height: 46px">
+              How can rapidly build HTTP APIs for your web apps without the
+              headache of web frameworks?
+            </h2>
+            <h3 style="font-size: 38px; line-height: 42px">
+              What is an API? Why we need an API?
+            </h3>
+            <p style="font-size: 32px; line-height: 40px">
+              Product Manager application before implement Azure Function:
+            </p>
+            <img
+              style="width: 800px; height: 400px"
+              src="./examples/assets/product-manager-parts.svg"
+              alt="PM cut"
+            />
+          </section>
+          <section>
+            <h3 style="font-size: 38px; line-height: 42px">
+              Let created the API, with Azure, that allows the front end and the
+              back end to safely communicate.
+            </h3>
+            <p style="font-size: 32px; line-height: 40px">
+              The Product Manager Application will look like this:
+            </p>
+            <img
+              style="width: 800px; height: 400px"
+              src="./examples/assets/product-manager-all-parts.svg"
+              alt="PM cut"
+            />
+          </section>
+          <section>
+            <p style="font-size: 30px; line-height: 36px">
+              Notice, that the API in project usually may contains:<br />
+              CreateProduct,<br />
+              DeleteProduct<br />
+              and UpdateProduct functions.
+            </p>
+
+            <img
+              src="./examples/assets/functions-in-terminal.png"
+              alt="api before Azure"
+            />
+            <p style="font-size: 28px; line-height: 30px">
+              API will connect to that database via a database
+              <b><i>"connection string".</i></b>
+            </p>
+          </section>
+          <section>
+            <h3>Store connection strings in Azure Functions</h3>
+            <p style="font-size: 28px; line-height: 30px">
+              In project which has a <b>local.settings.json</b> file. We can see
+              property called "CONNECTION_STRING", the connection string to your
+              database.
+            </p>
+            <pre><code data-line-numbers="6,7">
+              {"IsEncrypted": false,
+                "Values": {
+                "AzureWebJobsStorage": "",
+                "FUNCTIONS_WORKER_RUNTIME": "node",
+                "CONNECTION_STRING": "AccountEndpoint=https://some-link.documents.azure.com:443/;
+                AccountKey=some_account_key;"
+                }
+              }                
+              </code></pre>
+          </section>
+          <section
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            "
+          >
+            <h2 style="font-size: 40px; line-height: 46px">
+              Azure Functions routes HTTP
+            </h2>
+            <p style="font-size: 24px; line-height: 30px">
+              By default, any HTTP trigger function will respond to GET and POST
+              requests. It also sets the URL of your function. Both of these
+              things are configurable.
+            </p>
+            <!-- <p style="font-size: 24px; line-height: 30px">
+              The following <b>function.json</b> file shows the GetProducts
+              function.
+            </p> -->
+            <pre
+              style="flex-grow: 1"
+            ><code data-line-numbers="8,15" style="font-size: 16px; padding: 5px 0px;">
+            { "bindings": [
+                { "authLevel": "function",
+                  "type": "httpTrigger",
+                  "direction": "in",
+                  "name": "req",
+                  "methods": ["get", "post"],
+                  "route": "products"
+                }, {
+                  "type": "http",
+                  "direction": "out",
+                  "name": "res"
+                }
+              ],
+              "scriptFile": "../dist/GetProducts/index.js"}                           
+            </code></pre>
+          </section>
+          <section>
+            <p style="font-size: 38px; line-height: 42px">
+              Time to Make functions RESTful
+            </p>
+            <ol>
+              <li style="margin-top: 20px; font-size: 24px">
+                Open the <b>api/GetProducts/function.json</b> file.
+              </li>
+              <li style="margin-top: 20px; font-size: 24px">
+                Modify the "methods" property so that it only contains the value
+                "get"
+              </li>
+            </ol>
+            <pre><code data-line-numbers="7,8,15" style="font-size: 16px;">
+              {"bindings": [
+                  { "authLevel": "function",
+                    "type": "httpTrigger",
+                    "direction": "in",
+                    "name": "req",
+                    "methods": ["get"],
+                    "route": "products"
+                  },{
+                    "type": "http",
+                    "direction": "out",
+                    "name": "res"
+                  }
+                ],
+                "scriptFile": "../dist/GetProducts/index.js"}                                        
+            </code></pre>
+          </section>
+          <section>
+            <p style="font-size: 38px; line-height: 42px">
+              Make the CreateProduct function RESTful
+            </p>
+            <ol>
+              <li style="margin-top: 20px; font-size: 24px">
+                Open the <b>api/CreateProduct/function.json</b> file.
+              </li>
+              <li style="margin-top: 20px; font-size: 24px">
+                Restrict the allowed "methods" to just "post".
+              </li>
+            </ol>
+            <pre><code data-line-numbers="7,8,15" style="font-size: 16px;">
+              { "bindings": [
+                  { "authLevel": "function",
+                    "type": "httpTrigger",
+                    "direction": "in",
+                    "name": "req",
+                    "methods": ["post"],
+                    "route": "product"
+                  },{
+                    "type": "http",
+                    "direction": "out",
+                    "name": "res"
+                  }
+                ],
+                "scriptFile": "../dist/CreateProduct/index.js"}                                                     
+            </code></pre>
+          </section>
+          <section>
+            <p style="font-size: 38px; line-height: 42px">
+              Make the UpdateProduct function RESTful
+            </p>
+            <ol>
+              <li style="margin-top: 20px; font-size: 24px">
+                Open the <b>api/UpdateProduct/function.json</b> file.
+              </li>
+              <li style="margin-top: 20px; font-size: 24px">
+                Restrict the allowed "methods" to just "put".
+              </li>
+            </ol>
+            <pre><code data-line-numbers="7,8,15" style="font-size: 16px;">
+              {"bindings": [
+                 { "authLevel": "function",
+                   "type": "httpTrigger",
+                   "direction": "in",
+                   "name": "req",
+                    "methods": ["put"],
+                    "route": "product"
+                  }, {
+                    "type": "http",
+                    "direction": "out",
+                    "name": "res"
+                  }
+                ],
+                "scriptFile": "../dist/UpdateProduct/index.js"}                                                                     
+            </code></pre>
+          </section>
+          <section>
+            <p style="font-size: 38px; line-height: 42px">
+              Make the DeleteProduct function RESTful
+            </p>
+            <ol>
+              <li style="margin-top: 20px; font-size: 24px">
+                Open the <b>api/DeleteProduct/function.json</b> file.
+              </li>
+              <li style="margin-top: 20px; font-size: 24px">
+                Restrict the allowed "methods" to just "delete".
+              </li>
+            </ol>
+            <pre><code data-line-numbers="7,8,15" style="font-size: 16px;">
+              {"bindings": [
+                  { "authLevel": "function",
+                    "type": "httpTrigger",
+                    "direction": "in",
+                    "name": "req",
+                    "methods": ["delete"],
+                    "route": "product/{id}"
+                  }, {
+                    "type": "http",
+                    "direction": "out",
+                    "name": "res"
+                  }
+                ],
+                "scriptFile": "../dist/DeleteProduct/index.js"}                                                                                   
+            </code></pre>
+          </section>
+          <section>
+            <p style="font-size: 30px; line-height: 36px">
+              Notice that the URLs for a function endpoints are now different.
+            </p>
+
+            <img
+              src="./examples/assets/restful-endpoints4.png"
+              alt="api after Azure"
+            />
+            <p style="font-size: 30px; line-height: 36px">
+              Notice how you specified the same exact same route for the
+              CreateProduct, UpdateProduct, and DeleteProduct functions. Only
+              the HTTP request method is different.
+            </p>
+          </section>
+          <section>
+            <h2 style="font-size: 40px; line-height: 46px">Configure CORS</h2>
+            <p style="font-size: 24px; line-height: 30px">
+              Must have to tell the API that it's OK for the front-end
+              application to call it. This is done with something called
+              Cross-Origin Resource Sharing, or CORS.
+            </p>
+            <ol>
+              <li style="margin-top: 20px; font-size: 24px">
+                Open the <b>api/local.settings.json</b> file.
+              </li>
+              <li style="margin-top: 20px; font-size: 24px">
+                Add a "Host" section below the "Values" property. Set the "CORS"
+                value on "Host" to "*".
+              </li>
+            </ol>
+            <pre><code data-line-numbers="6,9" style="font-size: 16px;">
+              { "IsEncrypted": false,
+                "Values": {
+                  "AzureWebJobsStorage": "",
+                  "FUNCTIONS_WORKER_RUNTIME": "node",
+                  "CONNECTION_STRING": "PASTE YOUR CONNECTION STRING HERE"
+                },
+                "Host": {
+                  "CORS": "*"
+                }
+              }                                                                                                 
+            </code></pre>
+          </section>
+        </section>
+        <section
+          data-background-iframe="https://www.microsoft.com/en-us/videoplayer/embed/RE4ICN6?postJsllMsg=true"
+          data-background-interactive="true"
+          data-background-iframe-loop="true"
+          data-background-opacity="0.3"
+        >
+          <p style="line-height: 38px; font-size: 32px">
+            When we needed to build a solution that pulls code logic from an
+            existing JS Windows service, we can choose Azure function.
+          </p>
+          <p style="line-height: 38px; font-size: 32px">
+            As you can see how it's easy and successfully we are create HTTP
+            endpoints with Azure function. And configure it with CORS.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
